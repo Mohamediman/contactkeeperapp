@@ -17,7 +17,6 @@ app.use('/api/contacts', require('./routes/contact'));
 
 //====Check if the environment 
 if(process.env.NODE__ENV === 'production'){
-
     //==== Set the static folder
     app.use(express.static('client/build'));
 
