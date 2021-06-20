@@ -1,6 +1,9 @@
 const express = require('express');
 const { stat } = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: './config.env'});
 
 const dbConnect = require('./config/db');
 
@@ -16,7 +19,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/contacts', require('./routes/contact'));
 
 //====Check if the environment 
-if(process.env.NODE__ENV === 'production'){
+if(process.env.NODE_ENV === 'production'){
     //==== Set the static folder
     app.use(express.static('client/build'));
 
