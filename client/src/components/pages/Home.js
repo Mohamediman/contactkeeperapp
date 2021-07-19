@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, { useContext, useEffect } from 'react'
 import Contacts from '../../components/contacts/Contacts'
 import ContactForm from '../../components/contacts/ContactForm'
 import Contactfiltered from '../../components/contacts/ContactFiltered'
@@ -10,6 +10,7 @@ const Home = () => {
 
     //==== make sure to authenticate and keep authenticated on the home page
     useEffect(() => {
+        console.log("Home page Load User call");
         authcontext.loadUser();
 
         //eslint-disable-next-line

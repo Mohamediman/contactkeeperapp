@@ -37,7 +37,6 @@ const Register = (props) => {
         }else if (password !== password2 ){
             setAlert('Passwords do not Match', 'danger')
         } else {
-            console.log("Registering User..")
             registerUser({
                 name,
                 email,

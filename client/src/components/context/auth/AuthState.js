@@ -22,7 +22,7 @@ import {
 const AuthState = props => {
     const initialState = {
         token: localStorage.getItem('token'),
-        isAuthenticated: null,
+        isAuthenticated: false,
         loading: true,
         user: null,
         errors: null
@@ -41,9 +41,6 @@ const AuthState = props => {
         }
        try {
         const res = await axios.get('/api/auth');
-
-        console.log('res.data On Load User::', res.data);
-
         dispatch({
             type: USER_LOADED,
             payload: res.data.user
@@ -96,6 +93,7 @@ const AuthState = props => {
             })
 
             loadUser();
+
         } catch (err) {
             dispatch({
                 type: LOGIN_FAIL,
