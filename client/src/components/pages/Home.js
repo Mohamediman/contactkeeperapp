@@ -10,6 +10,7 @@ const Home = () => {
 
     //==== make sure to authenticate and keep authenticated on the home page
     useEffect(() => {
+        
         console.log("Home page Load User call");
         authcontext.loadUser();
 

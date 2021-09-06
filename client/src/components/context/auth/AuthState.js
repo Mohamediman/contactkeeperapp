@@ -55,6 +55,7 @@ const AuthState = props => {
 
     // Register User
     const registerUser = async formData => {
+        console.log("Register user is being calledd")
         const config = {
             headers: {
                 'Content-Type': 'application/json'
@@ -70,6 +71,7 @@ const AuthState = props => {
 
             loadUser();
         } catch (err) {
+            console.log("err.response", err.response)
             dispatch({
                 type: REGISTER_FAIL,
                 payload: err.response.data.msg
