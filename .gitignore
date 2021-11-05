@@ -1,7 +1,6 @@
 node_modules/
 
-/client/public/
-/client/src/
+
 /client/package.json
 /client/package-lock.json
 
